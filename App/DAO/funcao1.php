@@ -1,9 +1,5 @@
 <?php
-$x = 5;
-function executar()
-{
-    echo "a função foi executada.";
-}
+$x = 10;
 
 function Conexão()
 {

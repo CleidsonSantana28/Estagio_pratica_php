@@ -1,20 +1,21 @@
 <?php
+
 include('DAO/funcao1.php');
 
-// echo 'inicio da nossa aplicação';
-// echo '<br><br>';
-
-// function executar(){
-//     echo "a função foi executada.";
-// }
+/*
+foi criada um função de conexão como banco de dados do MySQL, e o mesmo é chamado em outro arquivo 
+e ápos a realização de suposto cadastro, verificação na condicional IF a variável X, sendo verdade essa condição realiza o 
+acesso ao banco, salva as informações e depois finalizando a conexão com o banco.
+*/
 
 try {
-    if($x<=10){
+    if ($x <= 10) {
         Conexão();
-        exit("Acesso ao banco realizado!");
-        
-        }
-
+        echo "Conexão finalizada<br>";
+        exit();
+    } else {
+        echo "Valor da Variavel maior que 10";
+    }
 } catch (PDOException $e) {
     echo "Mensagem: " . $e->getMessage() . "<br>";
     echo "Linha: " . $e->getLine() . "<br>";
