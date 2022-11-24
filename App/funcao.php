@@ -1,8 +1,8 @@
 <?php
-include('funcao1.php');
+include('DAO/funcao1.php');
 
-echo 'inicio da nossa aplicação';
-echo '<br><br>';
+// echo 'inicio da nossa aplicação';
+// echo '<br><br>';
 
 // function executar(){
 //     echo "a função foi executada.";
@@ -11,7 +11,8 @@ echo '<br><br>';
 try {
     if($x<=10){
         Conexão();
-        echo "Conectado";
+        exit("Acesso ao banco realizado!");
+        
         }
 
 } catch (PDOException $e) {
